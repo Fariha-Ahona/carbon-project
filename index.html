@@ -1,0 +1,527 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenTrack</title>
+    <link rel="stylesheet" href="responsive.css" />
+
+    <script
+      src="https://kit.fontawesome.com/286923ae95.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+   
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <header class="navbar flex justify-between items-center p-4 bg-green-50 shadow-md">
+      <div class="flex items-center space-x-2">
+        <!-- Logo Icon -->
+        <img
+          src="https://img.icons8.com/ios-filled/24/000000/forest.png"
+          alt="logo"
+        />
+        <!-- Logo Text -->
+        <div class="text-2xl font-bold">GreenTrack</div>
+      </div>
+    
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#home" class="hover:text-green-600">Home</a>
+        <a href="#about" class="hover:text-green-600">About</a>
+        <a href="#features" class="hover:text-green-600">Features</a>
+        <a href="#contact" class="hover:text-green-600">Contact</a>
+    
+        <!-- Get Started Button (Right-aligned) -->
+        <button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+          Get Started
+        </button>
+      </nav>
+    
+      <!-- Hamburger Icon (Visible on Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </header>
+    
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-white text-center px-4 py-2 shadow-md md:hidden">
+      <a href="#home" class="py-2 hover:text-green-600">Home</a>
+      <a href="#about" class="py-2 hover:text-green-600">About</a>
+      <a href="#features" class="py-2 hover:text-green-600">Features</a>
+      <a href="#contact" class="py-2 hover:text-green-600">Contact</a>
+      <a href="#get-started" class="py-2 hover:text-green-600">Get Started</a>
+    </div>
+    
+    
+    <style>
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Hero Section -->
+    <section
+      class="bg-green-50 text-gray-800 flex flex-col-reverse md:flex-row items-center px-8 md:px-16 py-12 md:py-24"
+    >
+      <!-- Left Content -->
+      <div class="md:w-1/2">
+        <h1
+          class="text-3xl md:text-4xl font-extrabold text-black leading-tight mb-4"
+        >
+          TRACK YOUR CARBON FOOTPRINT & SWITCH TO RENEWABLE ENERGY
+        </h1>
+        <p class="text-gray-600 mb-2">
+          Welcome to GreenTrack, your comprehensive platform for monitoring and
+          reducing your carbon footprint
+        </p>
+        <p class="text-gray-600 mb-6">
+          With GreenTrack, you can easily track your energy consumption,
+          transportation habits, and other carbon-generating activities
+        </p>
+        <div class="flex items-center space-x-4">
+          <button
+            class="bg-black text-white px-5 py-2 rounded hover:bg-gray-800"
+          >
+            Calculate My Footprint
+          </button>
+          <a
+            href="#"
+            class="text-gray-700 font-medium hover:bg-green-800 text-white px-4 py-2 rounded"
+          >
+            Start Now</a
+          >
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+        <img src="images/Globe.png" alt="Earth" class="max-w-xs md:max-w-md" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white py-12">
+      <h2 class="text-center text-3xl font-bold text-gray-900 mb-12">
+        ABOUT GREENTRACK
+      </h2>
+      <div class="flex flex-wrap justify-center gap-500 max-w-5xl mx-auto">
+        <!-- Group 1: Carbon Footprint Calculator and Smart Emission Insight -->
+        <div class="flex flex-col gap-6">
+          <!-- Carbon Footprint -->
+          <div class="flip-card relative w-48 h-32 mx-auto">
+            <div class="flip-inner">
+              <div
+                class="flip-front bg-emerald-500 flex flex-col items-center justify-center rounded shadow-md p-4"
+              >
+                <img
+                  src="images/carbon-footprint.png"
+                  alt="Carbon Footprint"
+                  class="w-12 h-12 mb-2"
+                />
+                <h3 class="text-sm font-semibold text-center">
+                  Carbon Footprint Calculator
+                </h3>
+              </div>
+              <div
+                class="flip-back bg-green-100 rounded shadow-md p-4 flex items-center justify-center text-sm text-center"
+              >
+                Calculates your CO₂ impact based on lifestyle and activities.
+              </div>
+            </div>
+          </div>
+
+          <!-- Smart Emission Insight -->
+          <div class="flip-card relative w-48 h-32 mx-auto">
+            <div class="flip-inner">
+              <div
+                class="flip-front flex flex-col items-center justify-center bg-[#5D9772] rounded shadow-md p-4"
+              >
+                <img
+                  src="images/smaremission.png"
+                  alt="Smart Emission"
+                  class="w-12 h-12 mb-2"
+                />
+                <h3 class="text-sm font-semibold text-center">
+                  Smart Emission Insight
+                </h3>
+              </div>
+              <div
+                class="flip-back bg-green-100 rounded shadow-md p-4 flex items-center justify-center text-sm text-center"
+              >
+                Get AI-powered analytics on your carbon emissions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2: Energy Explore (centered) -->
+        <!-- Glassmorphism Flip Card Example -->
+        <div class="flip-card relative w-52 h-36 mx-auto my-11">
+          <div class="flip-inner">
+            <!-- Front -->
+            <div
+              class="flip-front bg-white-600 flex flex-col items-center justify-center rounded shadow-lg p-4 backdrop-blur-md border border-white/30 transition-all duration-300"
+            >
+              <img
+                src="images/oil-and-gas.png"
+                alt="Energy Explore"
+                class="w-12 h-12 mb-2"
+              />
+              <h3 class="text-sm font-semibold text-center text-black">
+                Energy Explore
+              </h3>
+            </div>
+
+            <!-- Back -->
+            <div
+              class="flip-back rounded p-4 flex items-center justify-center text-sm text-center bg-green-100 backdrop-blur-md border border-white/30 text-black transition-all duration-300 shadow-[0_4px_30px_rgba(Green)]"
+            >
+              Discover where your energy comes from and its impact.
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 3: Eco Progress Tracker and Eco Achievements -->
+        <div class="flex flex-col gap-6">
+          <!-- Eco Progress Tracker -->
+          <div class="flip-card relative w-48 h-32 mx-auto">
+            <div class="flip-inner">
+              <div
+                class="flip-front flex flex-col items-center justify-center bg-emerald-600 rounded shadow-md p-4"
+              >
+                <img
+                  src="images/evolution.png"
+                  alt="Eco Progress"
+                  class="w-12 h-12 mb-2"
+                />
+                <h3 class="text-sm font-semibold text-center">
+                  Eco Progress Tracker
+                </h3>
+              </div>
+              <div
+                class="flip-back bg-green-100 rounded shadow-md p-4 flex items-center justify-center text-sm text-center"
+              >
+                Track your sustainability journey and goals.
+              </div>
+            </div>
+          </div>
+
+          <!-- Eco Achievements -->
+          <div class="flip-card relative w-48 h-32 mx-auto">
+            <div class="flip-inner">
+              <div
+                class="flip-front flex flex-col items-center justify-center bg-white rounded shadow-md p-4"
+              >
+                <img
+                  src="images/award.png"
+                  alt="Eco Achievements"
+                  class="w-12 h-12 mb-2"
+                />
+                <h3 class="text-sm font-semibold text-center">
+                  Eco Achievements
+                </h3>
+              </div>
+              <div
+                class="flip-back bg-green-100 rounded shadow-md p-4 flex items-center justify-center text-sm text-center"
+              >
+                Earn badges for your eco-friendly actions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Join the Green Movement (with hover and dark green color) -->
+      <div
+        class="bg-green-700 text-white p-6 shadow-lg rounded-lg mt-16 flex flex-col items-center max-w-md mx-auto transition duration-300 hover:bg-green-900 cursor-pointer"
+      >
+        <h3 class="text-lg font-semibold">Join the Green Movement</h3>
+      </div>
+    </section>
+    <!-- Flip Card Custom CSS -->
+    <style>
+      .flip-card {
+        perspective: 1000px;
+      }
+      .flip-inner {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .flip-card:hover .flip-inner {
+        transform: rotateY(180deg) translateY(-10px) scale(1.05);
+        box-shadow: 0 0 20px rgba(105, 199, 133, 0.94);
+      }
+
+      .flip-front,
+      .flip-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .flip-back {
+        transform: rotateY(180deg);
+      }
+    </style>
+<!-- Reviews Section with Green Background and Overlay Image -->
+<section class="relative py-16 mt-12">
+  <div class="text-center mb-8">
+    <h2 class="text-3xl font-bold text-gray-800">User Testimonials</h2>
+  </div>
+
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper px-4 max-w-6xl mx-auto">
+    <div class="swiper-wrapper">
+      <!-- Review Slide -->
+      <div class="swiper-slide bg-green-900 p-6 rounded-lg flex flex-col justify-between min-h-[220px]">
+
+        <div class="flex flex-col items-start">
+          <img src="images/(1).png" alt="Reviewer 1" class="w-12 h-12 rounded-full border-2 border-white shadow-md mb-4" />
+          <h4 class="font-semibold text-white">– Priya K.</h4>
+          <p class="italic text-white mt-2">"GreenTrack helped me become more aware of my energy usage ."</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide bg-green-900 p-6 rounded-lg flex flex-col justify-between min-h-[220px]">
+
+        <div class="flex flex-col items-start">
+          <img src="images/woman.png" alt="Reviewer 2" class="w-12 h-12 rounded-full border-2 border-white shadow-md mb-4" />
+          <h4 class="font-semibold text-white">– Ankit R.</h4>
+          <p class="italic text-white mt-2">"Using GreenTrack, I optimized my appliance usage schedule and saw instant savings!"</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide bg-green-900 p-6 rounded-lg">
+        <div class="flex flex-col items-start">
+          <img src="images/user.png" alt="Reviewer 3" class="w-12 h-12 rounded-full border-2 border-white shadow-md mb-4" />
+          <h4 class="font-semibold text-white">– Sarah W.</h4>
+          <p class="italic text-white mt-2">"I feel more empowered and environmentally responsible thanks to GreenTrack."</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide bg-green-900 p-6 rounded-lg">
+        <div class="flex flex-col items-start">
+          <img src="images/2.png" alt="Reviewer 4" class="w-12 h-12 rounded-full border-2 border-white shadow-md mb-4" />
+          <h4 class="font-semibold text-white">– Alex G.</h4>
+          <p class="italic text-white mt-2">"Love the daily sustainability tips and how easy it is to track progress."</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+
+
+    <!--Contact US-->
+    <section class="bg-white w-full px-6 md:px-20 py-16">
+      <div class="flex flex-col md:flex-row gap-8 items-stretch">
+        <!-- Left Side with Background Image -->
+        <div
+          class="relative rounded-lg overflow-hidden md:w-1/3 w-full min-h-[400px] flex items-center justify-center"
+        >
+          <!-- Change the image URL below -->
+          <div
+            class="absolute inset-0 bg-cover bg-center brightness-70 opacity-90"
+            style="background-image: url('images/contact.png')"
+          ></div>
+
+          <div class="relative z-10 text-white p-10 space-y-6">
+            <h2 class="text-3xl font-bold">Contact Us</h2>
+            <div class="space-y-4 text-sm/7">
+              <div class="flex items-start space-x-3">
+                <span>📍</span>
+                <p>4871 Renwick, Holtsville, New York</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span>✉</span>
+                <p>anymail@mail.com</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span>📞</span>
+                <p>+1 234 567 890</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span>🗓</span>
+                <p>Mon - Fri: 9 AM - 6 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div
+          class="bg-white p-10 flex-1 flex flex-col justify-between rounded-lg border border-gray-100 shadow"
+        >
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
+              Get In Touch With Us
+            </h2>
+            <p class="text-green-600 font-semibold mb-2">
+              AND WE WILL GET BACK TO YOU.
+            </p>
+            <div class="border-b-2 border-green-400 w-16 mb-6"></div>
+          </div>
+
+          <form class="space-y-4 flex-grow">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="p-3 bg-gray-100 w-full rounded outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="p-3 bg-gray-100 w-full rounded outline-none"
+              />
+            </div>
+            <input
+              type="email"
+              placeholder="Email"
+              class="p-3 bg-gray-100 w-full rounded outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Subject"
+              class="p-3 bg-gray-100 w-full rounded outline-none"
+            />
+            <textarea
+              placeholder="Message"
+              rows="4"
+              class="p-3 bg-gray-100 w-full rounded outline-none resize-none"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-green-700 text-white px-6 py-2 rounded font-semibold hover:bg-green-600"
+            >
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8 mt-12 p-20">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+        <div>
+          <div class="flex items-center space-x-2">
+            <img
+              src="https://img.icons8.com/ios-filled/24/000000/forest.png"
+              alt="logo"
+            />
+            <span class="font-bold text-black-600">GreenTrack</span>
+          </div>
+          <p class="mt-2">410-555 W Hastings St, Vancouver, BC</p>
+          <p class="mt-1">admin@archiactvr.com</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Our Website</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="hover:text-green-400">Home</a></li>
+            <li><a href="#" class="hover:text-green-400">About</a></li>
+            <li><a href="#" class="hover:text-green-400">Careers</a></li>
+            <li><a href="#" class="hover:text-green-400">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Developed By</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="https://www.linkedin.com/in/fariha-jahan-b05114332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-green-400">Fariha Jahan</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/isma-binte-shafik-a58b0a293" class="hover:text-green-400">Isma Binte Shafik</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/nusrat-hossain-885126332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-green-400">Nusrat Hossain</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Follow Us</h3>
+          <div class="mt-2 flex space-x-4">
+            <a href="#"
+              ><i
+                class="fa-brands fa-twitter hover:text-green-400"
+                style="color: #ffffff"
+              ></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-facebook-f" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-github" style="color: #ffffff"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- SwiperJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: false, // Disable dots
+      });
+    </script>
+    <script>
+      // Get references to elements
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      // Add event listener for the hamburger menu
+      menuToggle.addEventListener('click', () => {
+        // Toggle the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    
+  </body>
+</html>

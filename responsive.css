@@ -1,0 +1,65 @@
+/* Responsive Styles for GreenTrack */
+
+/* Flip Card - Disable Flip on Mobile */
+@media (max-width: 768px) {
+    .flip-inner {
+        transform: none !important;
+    }
+    .flip-card:hover .flip-inner {
+        transform: none !important;
+    }
+}
+
+/* Adjust Hero Section for Small Screens */
+@media (max-width: 640px) {
+    .hero-text {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
+
+/* Why Choose Us Section - Stack Elements on Mobile */
+@media (max-width: 768px) {
+    .why-choose-us {
+        flex-direction: column;
+        text-align: center;
+    }
+    .why-choose-us {
+        flex-direction: column;
+        text-align: center;
+    }
+    .why-choose-us img {
+        margin-top: 1rem;
+        width: 80%;
+    }
+}
+
+/* Swiper - Adjust Image Sizes on Small Screens */
+@media (max-width: 768px) {
+    .swiper-slide img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+/* Contact Us Section - Improve Readability */
+@media (max-width: 768px) {
+    .contact-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Navigation Bar - Responsive Hamburger Menu */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  
+    #mobile-menu a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
